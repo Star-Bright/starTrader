@@ -1,12 +1,12 @@
 package com.starBright.trader.backtests
 
-import java.text.DecimalFormat
-import java.time.format.DateTimeFormatter
 import akka.actor.{Actor, ActorLogging, Props, ReceiveTimeout}
 import com.starBright.trader.backtests.CvsPriceReader.{PriceTicks, ReadTicksFromCsv}
 import com.starBright.trader.models.Message
 import com.starBright.trader.strategies.StrategyFSM
 
+import java.text.DecimalFormat
+import java.time.format.DateTimeFormatter
 import scala.concurrent.duration._
 import scala.language.postfixOps
 

@@ -1,11 +1,10 @@
 package com.starBright.trader.ibEvents
 
-import com.ib.client.{Bar, CommissionReport, ContractDetails}
-import com.ib.client._
+import com.ib.client.{Bar, _}
+import com.starBright.trader.ibEvents.Events._
+import com.sun.org.slf4j.internal.{Logger, LoggerFactory}
 
 import java.{lang, util}
-import Events._
-import com.sun.org.slf4j.internal.{Logger, LoggerFactory}
 
 class IBEventWrapper(event: Events.IBEvent => Unit) extends EWrapper {
 

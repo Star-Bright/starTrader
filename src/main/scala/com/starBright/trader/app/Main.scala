@@ -12,7 +12,6 @@ import com.starBright.trader.requests.Requests._
 import com.sun.org.slf4j.internal.LoggerFactory
 
 import scala.concurrent.duration.DurationInt
-import scala.util.Random
 
 object Main {
 
@@ -57,7 +56,7 @@ object Main {
 
       ibEvents ~> Sink.foreach[IBEvent] {
         case ConnectionOK =>
-          log.warn(s"Connection Success: ${Random.alphanumeric.take(5).mkString}")
+          log.warn(s"Connection Success")
         case ExceptionError(e) =>
           log.warn(s"IB Returned an Exception", e)
         case ErrorMessage(m) =>

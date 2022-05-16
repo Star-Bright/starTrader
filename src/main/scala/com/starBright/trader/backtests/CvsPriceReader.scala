@@ -1,11 +1,11 @@
 package com.starBright.trader.backtests
 
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import akka.actor.Actor
 import com.starBright.trader.backtests.CvsPriceReader.{PriceTicks, ReadTicksFromCsv}
 import com.starBright.trader.models.Candle
 
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import scala.io.Source
 
 object CvsPriceReader {
